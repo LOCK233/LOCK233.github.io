@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCK-LIN</title>
+    <link rel="stylesheet" href="articleCSS-style.css">
+    <link rel="shortcut icon" href="imgs/小图标.png">
+</head>
+
+<body>
+    <!-- 顶部导航栏 + 封面开始-->
+    <div class="main clearfix ">
+        <div class="header">
+            <div class="logo"><img src="imgs/小图标.png" alt=""></div><!-- 插图记得换 -->
+            <div class="owner">
+                <h3>LOCK-LIN</h3>
+            </div>
+            <ul class="nav">
+                <li class="last1"><a href=""> 友人帐</a></li>
+                <li><a href="atme.html"> 关于我</a></li>
+                <li><a href=""> 分类</a></li>
+                <li><a href=""> 标签</a></li>
+                <li><a href="index.html"> 首页</a></li>
+            </ul>
+        </div>
+        <div class="bj">CSS笔记</div>
+    </div>
+    <!-- 顶部导航栏 + 封面结束 -->
+    <div class="lot w clearfix">
+        <div class="menu right">
+            <ul class="list">
+                <li class="first-list"><a href=""><span> </span>HTML笔记</a></li>
+                <li><a href="#1">一、style标签</a></li>
+                <li><a href="#2">二、CSS基础选择器</a></li>
+                <li><a href="#3">三、多类名</a></li>
+                <li><a href="#4">四、样式表</a></li>
+                <li><a href="#5">五、Emmett语法</a></li>
+                <li><a href="#6">六、选择器</a></li>
+                <li><a href="#7">七、CSS的元素显示模式</a></li>
+                <li><a href="#8">八、CSS的背景</a></li>
+                <li><a href="#9">九、CSS三大特性 </a></li>
+                <li><a href="#10">十、盒子模型 </a></li>
+                <li><a href="#11">十一、CSS浮动</a></li>
+                <li><a href="#12">十二、书写顺序</a></li>
+                <li><a href="#13">十三、CSS定位</a></li>
+                <li><a href="#14">十四、元素隐藏与显示</a></li>
+                <li><a href="#15">十五、字体图标</a></li>
+            </ul>
+        </div>
+        <!-- 笔记开始 -->
+        <div class="text clearfix">
+            <h1 id="1">CSS笔记</h1>
+            <h2>一、style标签</h2>
+            <blockquote>
+                <p class="gap"><code>&lt;style&gt;</code>修改样式，写在<code>&lt;head&gt;</code>中
+                    eg：
+                    <code>&lt;style&gt;</code>
+                    h3 {
+                    color: xxx；(修改字体颜色)（属性值间以；来分割）
+                    font-size： 12px；（修改了文字大小为12像素）
+                    }<br>
+                    <code>&lt;style&gt;</code>
+                </p>
+            </blockquote>
+            <h2 id="2">二、CSS基础选择器</h2>
+            <blockquote>
+                <p>1.<strong>标签选择器</strong>（以标签名作为选择器）
+                    语法：
+                    标签名 {
+                    属性1： 属性值1；
+                    属性2： 属性值2；
+                    属性3： 属性值3；
+                    ...
+                    }</p>
+                <p>2.<strong>类选择器</strong>
+                    用class属性调用class类的意思
+                    类选择器口诀: 样式点定义 结构类(class)调用 一个或多个 开发最常用
+                    eg：
+                    <code>&lt;head&gt;</code>
+                    <code>&lt;style&gt;</code>
+                    .red {
+                    color: red;
+                    }
+                    <code>&lt;/style&gt;</code>
+                    <code>&lt;/head&gt;</code>
+                    <code>&lt;body&gt;</code>
+                    <code>&lt;ul&gt;&lt;li class=&quot;red&quot;&gt;</code>冰雨<code>&lt;li&gt;&lt;ul&gt;</code>
+                    <code>&lt;div class=&quot;red&quot;&gt;</code>我也想变红色<code>&lt;/div&gt;</code>
+                    <code>1&lt;/body&gt;</code>
+                </p>
+                <p class="gap">类命名规则见P67 8分45</p>
+            </blockquote>
+            <h2 id="3">三、多类名</h2>
+            <pre><code> 使用方式 &lt;div class=&quot;red font20&quot;&gt;XXX&lt;/div&gt;
+</code></pre>
+            <blockquote>
+                <p><strong>1.ID选择器</strong>
+                    (id选择器的口诀: 样式#定义, 结构id调用, 只能调用一次, 别人切勿使用)
+                    语法：
+                    #id名{
+                    属性1；属性值1;
+                    ...
+                    }
+                    eg：
+                    #nav{
+                    color: red;
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>2.通配符选择器</strong>
+                    语法 *{
+                    属性1： 属性值1；
+                    ...
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>3.CSS字体属性</strong>
+                    字体系列 使用font-family属性定义文本的字体系列
+                    语法： p {font-family: &quot;微软雅黑&quot;；}
+                    div {font-family: Arial,&quot;Microsoft Yahei&quot;,&quot;微软雅黑“；}</p>
+                <p>使用font-weight属性定义文本的字体粗细
+                    语法： p {
+                    font-weight:bold;
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>4.使用font-weight属性定义文本的字体粗细</strong>
+                    p {
+                    font-style: normal;
+                    }</p>
+                <p>快捷 font:A B C/D E
+                    其中A=font-style（倾斜italic 不倾斜normal）
+                    B=font-weight(数字 normal为不加粗，即400)
+                    C=font-size（px）
+                    D=line-height
+                    E=font-family
+                    其中ABD均可省略，会取到默认值，但必须保留C和E属性</p>
+                <blockquote>
+                    <p>表示颜色的三种方法：1.预定义 eg：red，blue
+                        2.十六进制 eg：#FF0000
+                        3.RBG代码(red blue green) eg：（100%，0%，0%）</p>
+                </blockquote>
+            </blockquote>
+            <blockquote>
+                <p><strong>5.对齐文本</strong>
+                    text-align div{
+                    text-align:center;
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>6.装饰文本</strong>
+                    text-decoration （可用属性还有none overline line-through）
+                    div {
+                    text-decoration：underline；
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>7.text-indent，段落首行缩进(px)</strong>
+                    div{
+                    text-indent: 10px;
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p class="gap">line-height行间距控制
+                    div {
+                    line-height: 26px;
+                    }</p>
+            </blockquote>
+            <h2 id="4">四、样式表</h2>
+            <blockquote>
+                <p>1.内部样式表
+                    2.行内样式表
+                    直接写在元素标签中
+                    eg：<code>&lt;div style=&quot;color: red; font-size: 12px;&quot;&gt;</code>XXXXX<code>&lt;div&gt;</code>
+                    3.外部样式表
+                    外面单独建CSS文件
+                    在html页面中映入这个文件
+                    <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS文件路径&quot;&gt;</code>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p class="gap">chrome调试工具
+                    右键查看打开，ctrl+滚轮控制代码大小，ctrl+0复原</p>
+            </blockquote>
+            <h2 id="5">五、Emmett语法</h2>
+            <blockquote>
+                <p class="gap"><strong>一.快速生成HTML结构语法</strong>
+                    1.生成标签直接按tab
+                    2.快速生成多个，加上*，如div*3
+                    3.父子级标签，用&gt;,比如 ul&gt;li
+                    4.如果有兄弟关系的标签，用+，比如div+p
+                    5.生成带类名或id名字，直接写.demo或者#two tab键就可以了
+                    6.如果生成div名有顺序，可以用自增符号 $
+                    <strong>二.快速生成CSS语法</strong>
+                    采用简写形式 如
+                    1.w200+tab 可以生成 width：200px
+                    2.lh26+tab可以生成 line-height：26px
+                </p>
+            </blockquote>
+            <h2 id="6">六、选择器</h2>
+            <blockquote>
+                <p><strong>后代选择器</strong>
+                    元素1 元素2{样式声明}</p>
+                <p><strong>子选择器</strong>
+                    只能选择作为某元素的最近一级子元素
+                    语法：元素1&gt;元素2{样式声明}</p>
+                <p><strong>并集选择器</strong>
+                    元素1，元素2{样式声明}</p>
+                <p><strong>伪类选择器</strong></p>
+                <blockquote>
+                    <p>*链接伪类选择器
+                        a:link 选择所有未被访问的链接
+                        a:visited 选择所有已被访问的链接
+                        a:hover 选择鼠标指针位于其上的链接
+                        a:active 选择活动链接（鼠标按下未弹起的链接）</p>
+                </blockquote>
+                <p class="gap"><strong>focus伪类选择器</strong>
+                    用于选取获得焦点的表单元素
+                    input:focus{
+                    background-color:yellow;
+                    }</p>
+            </blockquote>
+            <h2 class="7">七、CSS的元素显示模式</h2>
+            <blockquote>
+                <p>HTML元素一般分为<strong>块元素</strong>和<strong>行内元素</strong>两种类型</p>
+                <blockquote>
+                    <p><strong>块元素</strong>特点（如div）
+                        1.自己独占一行
+                        2.高度，宽度,内外边距都可以控制
+                        3.宽度默认是容器（父级宽度）的100%
+                        4.是一个容器及盒子，里面可以放行内或者块级元素
+                        5.文字类元素中不能使用块级元素（如p h）</p>
+                </blockquote>
+                <p><strong>行内元素</strong>
+                    如<code>&lt;a&gt; &lt;strong&gt; &lt;b&gt; &lt;em&gt; &lt;i&gt; &lt;del&gt; &lt;s&gt; &lt;ins&gt; &lt;u&gt; &lt;span&gt;</code>
+                </p>
+                <blockquote>
+                    <p>特点</p>
+                    <ul>
+                        <li>相邻元素在一行上，一行可以显示多个元素</li>
+                        <li>高 宽直接设置是无效的</li>
+                        <li>默认宽度是其本身内容的宽度</li>
+                        <li>行内元素只容纳文本或其他行内元素</li>
+                    </ul>
+                </blockquote>
+                <p>注意：</p>
+                <ul>
+                    <li>
+                        <p>链接中不放a</p>
+                    </li>
+                    <li>
+                        <p>特殊情况下<code>&lt;a&gt;</code>中可以放块级元素，但是<code>&lt;a&gt;</code>转换下一级块模式最安全</p>
+                    </li>
+                </ul>
+                <p><strong>行内块元素</strong>
+                    (如<code>&lt;img/&gt; &lt;input&gt; &lt;td&gt;</code>)
+                    特点：</p>
+                <ul>
+                    <li>和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可显示多个（行内元素特点）</li>
+                    <li>默认宽度是本身内容宽度（行内元素特点）</li>
+                    <li>高度，行高，外边距以及内边距都可以控制（块级元素特点)</li>
+                </ul>
+                <p><strong>元素显示模式的转换</strong>
+                    元素转换</p>
+                <blockquote>
+                    <p>转换为块元素：display：block；
+                        转换为行内元素：display：inline
+                        转换成行内块：display:inline-block</p>
+                </blockquote>
+                <p class="gap"><strong>单行文字垂直居中的代码</strong>
+                    解决方案：让文字行高等于盒子的高度，可以让文字在当前盒子垂直居中</p>
+            </blockquote>
+            <h2 id="8">八、CSS的背景</h2>
+            <blockquote>
+                <p><strong>背景颜色</strong></p>
+                <blockquote>
+                    <p>background-color:颜色值；
+                        一般情况下默认是transparent（透明），我们也可以手动指定背景颜色为透明色</p>
+                </blockquote>
+                <p>背景图片</p>
+                <blockquote>
+                    <p>backgroung-image: none | url（地址），写的时候不要忘记url</p>
+                </blockquote>
+                <p><strong>背景平铺</strong>
+                    background-repeat|no-repeat|repeat-x|repeat-y</p>
+                <blockquote>
+                    <p>repeat:背景图像在纵向和横向上平铺
+                        no-repeat:背景图像不平铺
+                        repeat-x:背景图像在横向上平铺
+                        repeat-y:背景图像在纵向上平铺</p>
+                </blockquote>
+                <p><strong>背景图片的位置</strong>
+                    background-position:x y;
+                    x坐标和y坐标，可以用方位名词或者精确单位</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>参数值</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>length</td>
+                            <td>百分数/由浮点数字和单位标识组成的长度值</td>
+                        </tr>
+                        <tr>
+                            <td>position</td>
+                            <td>top/center/bottom/left/center/right 方位名词</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>背景图像的固定</strong>
+                    backgroung-attachment:scroll | fixed
+                    <strong>可用于制作视差滚动</strong>
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>参数</th>
+                            <th>作用</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>scroll</td>
+                            <td>背景图像时随对象内容滚动</td>
+                        </tr>
+                        <tr>
+                            <td>fixed</td>
+                            <td>背景图像固定</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>复合写法</strong>
+                    background：背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置
+                    （顺序可调换，上述为默认写法）</p>
+                <p><strong>背景色半透明</strong>
+                    background:rgba(0,0,0,0.3)</p>
+                <blockquote>
+                    <ul class="gap">
+                        <li>最后一个参数是alpha透明度，取值范围在0到1之间</li>
+                        <li>0.3可以写成.3</li>
+                        <li>盒子半透明内容不影响</li>
+                        <li>只支持IE9+版本浏览器</li>
+                    </ul>
+                </blockquote>
+            </blockquote>
+            <h2 id="9">九、CSS三大特性</h2>
+            <blockquote>
+                <p><strong>层叠性</strong></p>
+                <ul>
+                    <li>样式冲突时，哪个离结构近，就执行哪个样式</li>
+                    <li>样式不冲突，不会层叠</li>
+                </ul>
+                <p><strong>继承性</strong></p>
+                <ul>
+                    <li>可继承text-,font-,line-开头元素与color属性</li>
+                    <li>子元素可以继承父元素的行高</li>
+                    <li>行高可以不跟单位，如不跟，则表示当前文字大小<code>*</code>1.5，子元素继承后也会<code>*</code>1.5</li>
+                </ul>
+                <p><strong>优先级</strong></p>
+                <ul>
+                    <li>如选择器相同，执行层叠性</li>
+                    <li>如果选择器不同，则按权重</li>
+                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>选择器</th>
+                            <th>选择器权重</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>继承或*</td>
+                            <td>0，0，0，0</td>
+                        </tr>
+                        <tr>
+                            <td>元素选择器</td>
+                            <td>0，0，0，1</td>
+                        </tr>
+                        <tr>
+                            <td>类选择器，伪类选择器</td>
+                            <td>0，0，1，0</td>
+                        </tr>
+                        <tr>
+                            <td>ID选择器</td>
+                            <td>0，1，0，0</td>
+                        </tr>
+                        <tr>
+                            <td>行内样式style=“”</td>
+                            <td>1，0，0，0</td>
+                        </tr>
+                        <tr>
+                            <td>!important 重要的</td>
+                            <td>无穷大</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>权重的叠加</p>
+                <blockquote>
+                    <p class="gap">复合选择器的权重会叠加</p>
+                </blockquote>
+            </blockquote>
+            <h2 id="10">十、盒子模型</h2>
+            <blockquote>
+                <p>1.border可以设置元素边框，边框有三部分组成：边框宽度，边框样式，边框颜色
+                    语法：border：border-width(粗细) | border-style（样式） | border-color（颜色）</p>
+                <blockquote>
+                    <p>solid 实现边框 dashed 虚线边框 dotted 点线边框</p>
+                </blockquote>
+                <p>边框简写:<strong>border:1px solid red</strong> 没有顺序
+                    边框分开写法：<strong>border-top:1px solid red</strong>(只设置上边框，其余同理)</p>
+                <blockquote>
+                    <p>border-collapse,合并相邻边框(并非单元格)
+                        padding-XXX 决定盒子内边距
+                        (padding会撑开盒子，但是如果没设定height和width则不会)
+                        <img src="imgs笔记/padding.png" alt="图片" title="padding">
+                    </p>
+                </blockquote>
+            </blockquote>
+            <blockquote>
+                <p><strong>外边距</strong>
+                    margin属性用于设置外边距，即控制盒子和盒子之间的距离
+                    <img src="imgs笔记/margin.png" alt="marginalt">
+                    外边距典型应用1
+                    <img src="imgs笔记/waibianju.png" alt="图片">
+                </p>
+            </blockquote>
+            <blockquote>
+                <p><strong>嵌套块元素垂直外边距的塌陷</strong>
+                    <img src="imgs笔记/taxian.png" alt="图片">
+                </p>
+                <p>使用下列语句可清除自带内外边距
+                    *{
+                    margin=0
+                    padding=0
+                    }</p>
+            </blockquote>
+            <blockquote>
+                <p><strong>圆角边框</strong>
+                    <img src="imgs笔记/yuanjiao.png" alt="picture">
+                </p>
+                <p><strong>盒子阴影</strong>
+                    <img src="imgs笔记/shadow.png" alt="picture">
+                </p>
+                <blockquote>
+                    <p class="gap">设置文字改为text-shadow即可</p>
+                </blockquote>
+            </blockquote>
+            <h2 class="11">十一、CSS浮动</h2>
+            <blockquote>
+                <p>float属性用于创建浮动框，使其移动到一边，直到右边边缘触及包含块或另一个浮动框边缘</p>
+                <ul>
+                    <li>语法： 选择器{float：属性值；}
+                        <img src="imgs笔记/float.png" alt="picture">
+                    </li>
+                </ul>
+                <p><strong>浮动元素的特性</strong>
+                    1.浮动元素会脱离标准流</p>
+                <blockquote>
+                    <ul>
+                        <li>脱离标准普通流的控制（浮）移动到指定位置（动）</li>
+                        <li>浮动的盒子不再保留原先位置
+                            2.浮动元素会一行内显示并元素顶部对齐
+                            3.浮动的元素会具有行内块元素的特性</li>
+                    </ul>
+                </blockquote>
+                <p>浮动元素只影响后面的标准流元素，不影响前面的标准流元素</p>
+                <p><strong>清除浮动</strong>
+                    清除浮动之后,父级就会根据浮动的子盒子自动检测高度.父级有了高度就不会影响下面的标准流了</p>
+                <blockquote>
+                    <p>语法: (clear:属性值;)
+                        <img src="imgs笔记/清除浮动.png" alt="picture">
+                    </p>
+                </blockquote>
+                <p>清除浮动方法
+                    <strong>一.额外标签法(隔墙法)</strong>
+                    <img src="imgs笔记/after额外标签去浮动.png" alt="picture">
+                </p>
+                <p class="gap"><strong>二.父级添加overflow属性</strong>
+                    给父级添加overflow属性，将其属性值设置为hidden，auto或scroll（缺点是无法显示溢出的部分）
+                    <strong>三.父级添加after伪元素</strong>
+                    <img src="imgs笔记/after伪元素去浮动.png" alt="picture">
+                    <strong>四.父级添加双伪元素</strong>
+                    <img src="imgs笔记/双伪元素去浮动.png" alt="picture">
+                </p>
+            </blockquote>
+            <h2 id="12">十二、书写顺序</h2>
+            <p class="gap"><img src="imgs笔记/书写顺序.png" alt="picture"></p>
+            <h2 id="13">十三、CSS定位</h2>
+            <blockquote>
+                <p>定位是为了让盒子可以自由的在某个盒子内移动位置或者固定在屏幕中某个位置，并且可以压住其他盒子</p>
+                <blockquote>
+                    <p>定位=定位模式+边偏移</p>
+                </blockquote>
+                <p>一.定位模式
+                    <img src="imgs笔记/position.png" alt="picture">
+                </p>
+                <p>二.边偏移</p>
+                <blockquote>
+                    <p>边偏移就是定位的盒子移动到最终位置，有top，bottom，left，right四个属性
+                        <img src="imgs笔记/边偏移.png" alt="picture">
+                    </p>
+                </blockquote>
+            </blockquote>
+            <p>静态定位</p>
+            <blockquote>
+                <p>是元素的默认定位方式，无定位的意思
+                    选择器{position:static;}</p>
+            </blockquote>
+            <p>相对定位</p>
+            <blockquote>
+                <p>相对定位是元素在移动位置的时候，相对于其原来的位置而说的
+                    选择器{position:relative}
+                    移动后仍占有原来位置，且是相对于自己原来位置移动的</p>
+            </blockquote>
+            <p>绝对定位</p>
+            <blockquote>
+                <p>绝对定位是在元素移动位置的时候，是相对于他的祖先元素来说的
+                    选择器{position:absolute;}</p>
+                <blockquote>
+                    <p>特点：
+                        1.如果没有祖先元素或者祖先元素没有定位，则以浏览器为准定位
+                        2.如果祖先元素有定位(相对，绝对，固定定位)，则以最近一级的有定位祖先元素为参考点移动位置
+                        绝对定位不再占有原来的位置</p>
+                </blockquote>
+            </blockquote>
+            <p>固定定位fixed</p>
+            <blockquote>
+                <p>固定定位是元素固定于浏览器可视区的位置。
+                    选择器{position:fixed;}</p>
+                <blockquote>
+                    <p>特点
+                        1.以浏览器的可视窗口为参照点移动元素（即和父元素没有任何关系并且不随滚动条滚动而滚动）
+                        2.固定定位不再占有原先的位置</p>
+                </blockquote>
+            </blockquote>
+            <p>粘性定位sticky</p>
+            <blockquote>
+                <p>粘性定位可以看成相对定位和固定定位的混合
+                    选择器{position:sticky;top:10px;}</p>
+                <blockquote>
+                    <p>特点
+                        1.以浏览器的可视窗口为参照点移动元素
+                        2.粘性定位占有原来的位置
+                        3.必须添加top,left,right,bottom其中的一个才有效</p>
+                </blockquote>
+            </blockquote>
+            <p>定位小结
+                <img src="imgs笔记/定位小结.png" alt="picture">
+            </p>
+            <p>定位的叠放次序z-index</p>
+            <blockquote>
+                <p>在使用定位布局时可能会出现盒子重叠的情况，此时可以用z-index来控制盒子的前后次序
+                    语法：选择器{z-index:1;}</p>
+                <blockquote>
+                    <p class="gap">1.数值可以是正整数，负数，或者0，默认值是auto，数值越大，盒子越靠上
+                        2.相同属性值后来者居上</p>
+                </blockquote>
+            </blockquote>
+            <h2 id="14">十四、元素隐藏与显示</h2>
+            <blockquote>
+                <p>display:none（隐藏 隐藏后不保留位置）
+                    display:block(显示)</p>
+            </blockquote>
+            <p>visibility可见性</p>
+            <blockquote>
+                <p>visibility属性用于指定一个元素可见还是隐藏</p>
+                <blockquote>
+                    <p>visibility:visible:元素可视
+                        visibility:hidden:元素隐藏（visibility隐藏元素后，继续占有原来的位置）</p>
+                </blockquote>
+            </blockquote>
+            <p>overflow</p>
+            <blockquote>
+                <p><img src="imgs笔记/overflow.png" alt="picture"></p>
+            </blockquote>
+            <p class="gap">精灵图（用background-position调整，这里略）</p>
+            <h2 id="15">十五、字体图标</h2>
+            <blockquote>
+                <p>1.下载图标(推荐www.iconfont.cn和icomoon.io)
+                    2.字体图标的引入</p>
+            </blockquote>
+        </div>
+        <!-- 笔记结束 -->
+    </div>
+    <!-- 尾部开始 -->
+    <div class="footer">
+        <div class="designed">
+            <h2>DESIGNED BY LOCK-LIN</h2>
+        </div>
+        <div class="connection">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 尾部结束 -->
+</body>
+
+</html>
