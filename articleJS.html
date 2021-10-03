@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCK-LIN</title>
+    <link rel="stylesheet" href="articleJS-style.css">
+    <link rel="shortcut icon" href="imgs/图标.png">
+</head>
+
+<body>
+    <!-- 顶部导航栏 + 封面开始-->
+    <div class="main clearfix ">
+        <div class="header">
+            <div class="logo"><img src="imgs/图层1.png" alt=""></div>
+            <div class="owner">
+                <h3>LOCK-LIN</h3>
+            </div>
+            <ul class="nav">
+                <li class="last1"><a href=""> 友人帐</a></li>
+                <li><a href="atme.html"> 关于我</a></li>
+                <li><a href=""> 分类</a></li>
+                <li><a href=""> 标签</a></li>
+                <li><a href="index.html"> 首页</a></li>
+            </ul>
+        </div>
+        <div class="bj">JS笔记</div>
+    </div>
+    <!-- 顶部导航栏 + 封面结束 -->
+    <div class="lot w clearfix">
+        <div class="menu right">
+            <ul class="list">
+                <li class="first-list"><a href=""><span> </span>JS笔记</a></li>
+                <li><a href="#1">一、JS的写法</a></li>
+                <li><a href="#2">二、JS常用输入/输出语句</a></li>
+                <li><a href="#3">三、变量</a></li>
+                <li><a href="#4">四、数据类型</a></li>
+                <li><a href="#5">五、运算符</a></li>
+                <li><a href="#6">六、分支流程控制</a></li>
+                <li><a href="#7">七、数组</a></li>
+                <li><a href="#8">八、函数</a></li>
+                <li><a href="#9">九、作用域及预解析 </a></li>
+                <li><a href="#10">十、对象</a></li>
+            </ul>
+        </div>
+        <!-- 笔记开始 -->
+        <div class="text clearfix">
+            <h1>JS</h1>
+            <h2 id="1">JS的写法</h2>
+            <blockquote>
+                <p>1.行内式
+                    2.内嵌式JS，在<code>&lt;head&gt;&lt;/head&gt;</code>中写上<code>&lt;script&gt;&lt;/script&gt;</code>,再在其中写上JS样式
+                    3.外部JS，新建一个后缀名为.js的文件，在里面直接书写样式之后，在引入页面中写<code>&lt;script src=&quot; .js&quot;&gt;&lt;/script&gt;</code>
+                </p>
+            </blockquote>
+            <h2 id="2">JS常用输入/输出语句</h2>
+            <blockquote>
+                <p>1.输入语句
+                    <img src="imgs/JS%E8%BE%93%E5%85%A5%E8%AF%AD%E5%8F%A5.png" alt="picture">
+                </p>
+            </blockquote>
+            <h2 id="3">变量的使用</h2>
+            <blockquote>
+                <p>1.声明变量
+                    eg： var age；（声明一个名称为age的变量）
+                    2.赋值
+                    eg：age=10(用 = 将值赋给变量)
+                    3.输出变量
+                    eg: consule.log(age);(在控制台中输出age)
+                    变量的初始化
+                    eg: var age = 18(一步到位)</p>
+            </blockquote>
+            <h2>声明变量的特殊情况</h2>
+            <blockquote>
+                <p><img src="imgs/%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5.png"
+                        alt="picture"></p>
+            </blockquote>
+            <h2 id="4">数据类型</h2>
+            <blockquote>
+                <p>在JavaScript中，变量数据类型是根据等号右边的赋值决定的，并且在运行中变量类型可变
+                    简单数据类型
+                    <img src="imgs/%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" alt="picture">
+                    <strong>数字型number</strong>
+                </p>
+            </blockquote>
+            <p>1.数字型进制</p>
+            <blockquote>
+                <p><img src="imgs/%E6%95%B0%E5%AD%97%E5%9E%8B%E8%BF%9B%E5%88%B6.png" alt="picture"></p>
+            </blockquote>
+            <p>2.数字型范围</p>
+            <blockquote>
+                <p><img src="imgs/JavaScript%E4%B8%AD%E6%95%B0%E5%80%BC%E7%9A%84%E6%9C%80%E5%80%BC.png" alt="picture">
+                </p>
+            </blockquote>
+            <p>3.数字型的三个特殊值</p>
+            <blockquote>
+                <p><img src="imgs/%E6%95%B0%E5%AD%97%E5%9E%8B%E7%9A%84%E4%B8%89%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%80%BC.png"
+                        alt="picture"></p>
+            </blockquote>
+            <p>4.isNaN()</p>
+            <blockquote>
+                <blockquote>
+                    <p>用来判断一个值是不是数字，是便返回false,不是则返回true</p>
+                </blockquote>
+                <p><strong>字符串类型string</strong>
+                    1.用于引用文本，语法为单引号(推荐)或双引号</p>
+                <blockquote>
+                    <p>JS中字符串可以用单引号嵌套双引号或双引号嵌套单引号</p>
+                </blockquote>
+            </blockquote>
+            <p>2.字符串转义符</p>
+            <blockquote>
+                <p><img src="imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B9%89%E7%AC%A6.png" alt="picture"></p>
+            </blockquote>
+            <p>3.字符串长度</p>
+            <blockquote>
+                <p>通过length属性可以获取字符串的长度
+                    var str=&quot;你好你好&quot;
+                    eg:alert(str.length)//显示4</p>
+                <p>字符串的拼接
+                    <img src="imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5.png" alt="picture">
+                </p>
+                <p><strong>布尔型Boolean</strong>
+                    布尔型只有true和false两个值，运算时true当1，false当作2</p>
+                <p><strong>undefined与null</strong>
+                    undefined为未定义值
+                    null为空值</p>
+            </blockquote>
+            <h2>获取数据变量类型</h2>
+            <blockquote>
+                <p>typeof可用来检测变量的数据类型
+                    字面量是在源代码中一个固定值的表示法，通俗来说，就是字面量如何表示这个值</p>
+            </blockquote>
+            <h2>数据类型的转换</h2>
+            <p>1.转换成字符串</p>
+            <blockquote>
+                <p><img src="imgs/%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt="picture"></p>
+            </blockquote>
+            <p>2.转换成数字型</p>
+            <blockquote>
+                <p><img src="imgs/%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B0%E5%AD%97%E5%9E%8B.png" alt="picture"></p>
+            </blockquote>
+            <p>3.转换为布尔型</p>
+            <blockquote>
+                <p><img src="imgs/%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%B8%83%E5%B0%94%E5%9E%8B.png" alt="picture"></p>
+            </blockquote>
+            <h2 id="5">运算符</h2>
+            <p>1.算术运算符</p>
+            <blockquote>
+                <p><img src="imgs/%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="picture"></p>
+                <blockquote>
+                    <p>浮点数在运算中存在精度问题</p>
+                </blockquote>
+            </blockquote>
+            <p>2.递增运算符</p>
+            <blockquote>
+                <p>自增，自减运算符++与--
+                    后置自增会在返回原值之后再自加1</p>
+            </blockquote>
+            <p>3.比较运算符</p>
+            <blockquote>
+                <p><img src="imgs/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="picture"></p>
+            </blockquote>
+            <p>4.逻辑运算符</p>
+            <blockquote>
+                <p>&amp;&amp; 表示“与”
+                    || 表示或
+                    ! 表示“非”</p>
+            </blockquote>
+            <p>5.短路运算（逻辑中断）</p>
+            <blockquote>
+                <p><img src="imgs/&amp;&amp;%E7%9F%AD%E8%B7%AF%E8%BF%90%E7%AE%97.png" alt="picture">
+                    <img src="imgs/%E6%88%96%E9%80%BB%E8%BE%91%E4%B8%AD%E6%96%AD.png" alt="picture">
+                </p>
+                <p>赋值运算符
+                    <img src="imgs/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="picture">
+                </p>
+            </blockquote>
+            <p>6.运算符优先级</p>
+            <blockquote>
+                <p><img src="imgs/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7.png" alt="picture"></p>
+                <blockquote>
+                    <p>一元运算符中逻辑非的优先级很高
+                        逻辑与比逻辑或优先级高</p>
+                </blockquote>
+            </blockquote>
+            <h2 id="6">流程控制</h2>
+            <p>1.流程控制</p>
+            <blockquote>
+                <ul>
+                    <li>顺序结构</li>
+                    <li>分支结构</li>
+                    <li>循环结构</li>
+                </ul>
+            </blockquote>
+            <h2>分支流程控制IF语句</h2>
+            <p>1.if-else语句(双分支语句)</p>
+            <blockquote>
+                <p>语法结构</p>
+                <p>if(条件表达式){
+                    //(如果)条件成立执行的代码语句
+                    }
+                    else{
+                    //(否则)执行的代码
+                    }</p>
+            </blockquote>
+            <p>2.三元运算符</p>
+            <blockquote>
+                <p>语法结构
+                    条件表达式 ？ 表达式1 : 表达式2
+                    如果条件表达式为真 则返回 表达式1 的值 如果条件表达式为假 则返回 表达式2 的值</p>
+            </blockquote>
+            <h2>分支流程控制SWITCH语句</h2>
+            <p>1.switch语句</p>
+            <blockquote>
+                <p>switch(表达式){
+                    case value1:
+                    执行语句1;
+                    break;
+                    case value2:
+                    执行语句2;
+                    break;
+                    ...
+                    default:
+                    执行最后语句；
+                    }</p>
+            </blockquote>
+            <h2>循环</h2>
+            <p>1.for循环</p>
+            <blockquote>
+                <p>语法结构：
+                    for(初始化变量；条件表达式；操作表达式){
+                    //循环体
+                    }</p>
+            </blockquote>
+            <p>2.双重for循环</p>
+            <blockquote>
+                <p>外部for循环一次，内部for循环全部</p>
+            </blockquote>
+            <p>3.while循环</p>
+            <blockquote>
+                <p>语法结构
+                    while(条件表达式){
+                    //循环体
+                    }</p>
+                <blockquote>
+                    <p>如条件表达式为true则执行循环体</p>
+                </blockquote>
+            </blockquote>
+            <p>4.do-while循环</p>
+            <blockquote>
+                <p>语法结构
+                    do{
+                    //循环体
+                    }while(条件表达式)</p>
+                <blockquote>
+                    <p>与while不同，do-while为先执行一次循环体再判断条件表达式,为真就继续循环，否则退出循环</p>
+                </blockquote>
+            </blockquote>
+            <p>5.continue</p>
+            <blockquote>
+                <p>跳出当前次循环</p>
+            </blockquote>
+            <p>6.break</p>
+            <blockquote>
+                <p>跳出整个循环（循环结束）</p>
+            </blockquote>
+            <h2 id="7">数组</h2>
+            <blockquote>
+                <p>数组就是一组数据的集合 存储在单个变量下</p>
+            </blockquote>
+            <p>1.创建数组</p>
+            <blockquote>
+                <blockquote>
+                    <p>利用new来创建数组</p>
+                </blockquote>
+                <p><img src="imgs/new%E5%88%9B%E5%BB%BA%E6%96%B0%E6%95%B0%E7%BB%84.png" alt="picture"></p>
+                <blockquote>
+                    <p>利用数组字面量来创建数组
+                        <img src="imgs/%E6%95%B0%E7%BB%84%E5%AD%97%E9%9D%A2%E9%87%8F.png" alt="picture">
+                    </p>
+                </blockquote>
+            </blockquote>
+            <p>2.遍历数组</p>
+            <blockquote>
+                <p>利用for循环将数组中所有元素取出
+                    数组的索引号从零开始</p>
+            </blockquote>
+            <p>3.数组长度</p>
+            <blockquote>
+                <p>使用 &quot;数组名.length&quot;可以访问数组元素的数量(数组长度)</p>
+            </blockquote>
+            <p>4.通过修改length长度新增数组元素</p>
+            <blockquote>
+                <p><img src="imgs/%E6%96%B0%E5%A2%9E%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0.png" alt="picture"></p>
+            </blockquote>
+            <p>5.修改索引号新增数组元素</p>
+            <blockquote>
+                <p><img src="imgs/%E4%BF%AE%E6%94%B9%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0.png"
+                        alt="picture"></p>
+            </blockquote>
+            <p>6.instanceof 运算符/Array.isarray()检测是否为数组</p>
+            <p>7.增加删除数组元素</p>
+            <blockquote>
+                <p><img src="imgs/%E5%A2%9E%E5%88%A0%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0.png" alt="img"></p>
+            </blockquote>
+            <p>8.数组排序</p>
+            <blockquote>
+                <p><img src="imgs/%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F.png" alt="img"></p>
+            </blockquote>
+            <p>9.数组索引</p>
+            <blockquote>
+                <p><img src="imgs/%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95.png" alt="img"></p>
+            </blockquote>
+            <blockquote>
+                <p>10.数组转换为字符串
+                    <img src="imgs/%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2.png"
+                        alt="img">
+                </p>
+            </blockquote>
+            <h2 id="8">函数</h2>
+            <p>1.声明函数</p>
+            <blockquote>
+                <p>function 函数名(形参1，形参2...){
+                    //函数体
+                    }</p>
+            </blockquote>
+            <p>2.调用函数</p>
+            <blockquote>
+                <p>函数名(实参1，实参2...)</p>
+            </blockquote>
+            <p>3.函数的返回值</p>
+            <blockquote>
+                <p>function 函数名(形参1，形参2...){
+                    return 需要返回的结果；
+                    }</p>
+                <blockquote>
+                    <p>在实际开发中我们经常用一个变量来接受函数返回的结果
+                        return后面的代码不会被执行
+                        return只能返回一个值</p>
+                </blockquote>
+            </blockquote>
+            <p>4.arguments的使用</p>
+            <blockquote>
+                <p><img src="imgs/arguments%E7%9A%84%E4%BD%BF%E7%94%A8.png" alt="picture"></p>
+            </blockquote>
+            <p>5.一个函数中可以调用另外一个函数</p>
+            <p>6.匿名函数</p>
+            <blockquote>
+                <p><img src="imgs/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0.png" alt="picture"></p>
+            </blockquote>
+            <h2 id="9">作用域</h2>
+            <blockquote>
+                <p>1.JavaScript作用域就是代码名字(变量)在某个范围内起的效果和作用，提升程序的可靠性，减少命名冲突
+                    2.js的作用域：全部作用域 局部作用域
+                    3.全局作用域：整个script标签，或者是一个单独的js文件 （在函数内部没有定义的变量也看作全局变量）
+                    4.局部作用域(函数作用域)在函数内部就是局部作用域 这个代码的名字旨在函数内部起效果和作用。（函数的形参为局部变量）
+                    5.作用域链：内部函数访问外部函数的变量，采取的是链式查找的方式来决定取那个值，这种结构我们称作作用域链，采用就近原则</p>
+            </blockquote>
+            <h2>JavaScript预解析</h2>
+            <blockquote>
+                <p><img src="imgs/%E9%A2%84%E8%A7%A3%E6%9E%90.png" alt="picture"></p>
+            </blockquote>
+            <h2 id="10">对象</h2>
+            <blockquote>
+                <p>在JavaScript中，对象是一组无序的相关属性和方法的集合，所有的事物都是对象，例如字符串、数值、数组、函数等
+                    对象是由属性和方法组成的</p>
+                <blockquote>
+                    <p>属性：事物的特征，在对象中用 属性 来表示(常用名词)
+                        方法：事物的特征，在对象中用 方法来表示(常用动词)</p>
+                </blockquote>
+            </blockquote>
+            <p>1.利用对象自变量创建对象{}</p>
+            <blockquote>
+                <p>语法格式 var obj = {
+                    //对象的属性与方法
+                    }</p>
+                <blockquote>
+                    <p>里面的属性或者方法我们采取键值对的形式 键 属性名；值 属性值
+                        多个属性或者方法中间用逗号隔开
+                        方法后面跟的是一个匿名函数</p>
+                </blockquote>
+            </blockquote>
+            <p>2.调用对象属性</p>
+            <blockquote>
+                <p>采取对象名+属性的方法
+                    eg:console.log(obj.uname)</p>
+                <blockquote>
+                    <p>法二：对象名['属性名']</p>
+                </blockquote>
+                <p>调用对象的方法</p>
+                <blockquote>
+                    <p>对象名.方法名</p>
+                </blockquote>
+            </blockquote>
+            <p>3.new Object 创建对象</p>
+            <blockquote>
+                <p>语法结构
+                    var 对象名 = new Object(){
+                    对象名.属性名 = '值'；
+                    对象名.方法名 = function(){
+                    //行为
+                    }
+                    }</p>
+                <blockquote>
+                    <p>(1)利用等号赋值的方法添加对象的属性和方法
+                        (2)每个属性和方法之间用分号结束</p>
+                </blockquote>
+            </blockquote>
+            <p>3.利用构造函数创建对象</p>
+            <blockquote>
+                <p><img src="imgs/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F.png"
+                        alt="img"></p>
+                <blockquote>
+                    <p>(1)构造函数名字首字母要大写
+                        (2)构造函数不需要return就可以返回结果
+                        (3)我们调用构造函数 必须使用new
+                        (4)我们只要new 函数名() 调用函数就创建一个对象
+                        (5)我们的属性和方法前面必须添加this</p>
+                </blockquote>
+            </blockquote>
+            <p>4.遍历对象属性</p>
+            <blockquote>
+                <p>for...in语句用于对数组或者对象的属性进行循环操作
+                    语法结构：
+                    for (var k in 函数名){
+                    console.log(k);//输出的是变量名
+                    console.log(obj[k]);//输入obj[k]时得到的是属性值
+                    }</p>
+            </blockquote>
+            <h2>内置对象</h2>
+            <p>1.查阅文档</p>
+            <blockquote>
+                <p>利用MDN</p>
+            </blockquote>
+            <p>2.math内置函数</p>
+            <blockquote>
+                <p><img src="imgs/.math%E6%A6%82%E8%BF%B0png.png" alt="img"></p>
+            </blockquote>
+            <p>3.math random()随机数法</p>
+            <blockquote>
+                <p>random返回一个随机的小数
+                    该方法中不跟参数</p>
+            </blockquote>
+            <p>4.date</p>
+            <h2>字符串对象</h2>
+            <p>1.根据字符返回位置</p>
+            <blockquote>
+                <p><img src="imgs/%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E8%BF%94%E5%9B%9E%E4%BD%8D%E7%BD%AE.png"
+                        alt="img"></p>
+            </blockquote>
+            <p>2.根据位置返回字符</p>
+            <blockquote>
+                <p><img src="imgs/%E6%A0%B9%E6%8D%AE%E4%BD%8D%E7%BD%AE%E8%BF%94%E5%9B%9E%E5%AD%97%E7%AC%A6.png"
+                        alt="img"></p>
+            </blockquote>
+            <p>3.字符串操作方法</p>
+            <blockquote>
+                <p><img src="imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95.png" alt="img">
+                </p>
+            </blockquote>
+            <h2>JS中的简单数据类型与复杂数据类型</h2>
+            <p>1.简单数据类型，复杂数据类型</p>
+            <blockquote>
+                <p><img src="imgs/%E7%AE%80%E5%8D%95%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png"
+                        alt="img"></p>
+            </blockquote>
+            <p>2.堆和栈</p>
+            <blockquote>
+                <p>(1)堆(操作系统)：由操作系统自动分配释放函数的参数值、局部变量的值等。其操作方式类似于数据结构中的栈；简单数据类型存放到栈里面
+                    (2)堆(操作系统)：存储复杂类型(对象)，一般由程序员分配释放，如程序员不释放，由垃圾回收机制回收。复杂数据类型存放到堆里面</p>
+                <blockquote>
+                    <p>简单数据类型存放在栈里面，直接开辟一个空间，存放的是值
+                        复杂数据类型首先在栈里面存放地址，用十六进制表示，然后地址指向堆里面的数据</p>
+                </blockquote>
+            </blockquote>
+
+
+
+
+
+
+
+        </div>
+        <!-- 笔记结束 -->
+    </div>
+    <!-- 尾部开始 -->
+    <div class="footer">
+        <div class="designed">
+            <h2>DESIGNED BY LOCK-LIN</h2>
+        </div>
+        <div class="connection">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 尾部结束 -->
+
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCK-LIN</title>
+    <link rel="stylesheet" href="articleHT-style.css">
+    <link rel="shortcut icon" href="imgs/图标.png">
+</head>
+
+<body>
+    <!-- 顶部导航栏 + 封面开始-->
+    <div class="main clearfix ">
+        <div class="header">
+            <div class="logo"><img src="imgs/图层1.png" alt=""></div><!-- 插图记得换 -->
+            <div class="owner">
+                <h3>LOCK-LIN</h3>
+            </div>
+            <ul class="nav">
+                <li class="last1"><a href=""> 友人帐</a></li>
+                <li><a href="atme.html"> 关于我</a></li>
+                <li><a href=""> 分类</a></li>
+                <li><a href=""> 标签</a></li>
+                <li><a href="index.html"> 首页</a></li>
+            </ul>
+        </div>
+        <div class="bj">HTML笔记</div>
+    </div>
+    <!-- 顶部导航栏 + 封面结束 -->
+    <div class="lot w clearfix">
+        <div class="menu right">
+            <ul class="list">
+                <li class="first-list"><a href=""><span> </span>HTML笔记</a></li>
+                <li><a href="#1">一、基础标签</a></li>
+                <li><a href="#2">二、图像标签</a></li>
+                <li><a href="#3">三、链接标签</a></li>
+                <li><a href="#4">四、锚点链接</a></li>
+                <li><a href="#5">五、注释标签</a></li>
+                <li><a href="#6">六、表格的基本语法</a></li>
+                <li><a href="#7">七、无序列表</a></li>
+                <li><a href="#8">八、有序列表</a></li>
+                <li><a href="#9">九、自定义 </a></li>
+                <li><a href="#10">十、表单域</a></li>
+            </ul>
+        </div>
+        <!-- 笔记开始 -->
+        <div class="text clearfix">
+            <h1>HTML笔记</h1>
+            <h2>标签</h2>
+            <h3 id="1">一、基础标签</h3>
+            <blockquote>
+                <ul class="gap">
+                    <li><code>&lt;h1&gt;-&lt;h6&gt;</code>标题标签 (head)
+                        eg:<code>&lt;h1&gt;</code>我是一级标签<code>&lt;/h1&gt;</code></li>
+                    <li><code>&lt;p&gt;&lt;/p&gt;</code>段落标签 （paragraph）</li>
+                    <li><code>&lt;br /&gt;</code>换行标签 （break）</li>
+                    <li><code>&lt;strong&gt; &lt;/strong&gt;</code>（更强烈）
+                        或<code>&lt;b&gt;&lt;/b&gt;</code> 加粗标签</li>
+                    <li><code>&lt;em&gt;&lt;/em&gt;</code>（更强烈）
+                        或<code>&lt;i&gt;&lt;/i&gt;</code> 倾斜标签</li>
+                    <li><code>&lt;del&gt;&lt;/del&gt;</code>（更强烈）
+                        或<code>&lt;s&gt;&lt;/s&gt;</code>&gt; 删除线</li>
+                    <li><code>&lt;ins&gt;&lt;/ins&gt;</code>（更强烈）
+                        或<code>&lt;u&gt;&lt;/u&gt;</code> 下划线</li>
+                    <li><code>&lt;div&gt;&lt;span&gt;</code>无语义装内容</li>
+                </ul>
+            </blockquote>
+
+            <h3 id="2">二、图像标签</h3>
+            <blockquote>
+                <p>图像标签和路径（相对绝对）
+                    <code>&lt;img src=&quot;图像URL&quot;/&gt;</code>
+                    <code>&lt;img src=&quot;&quot; alt=&quot;&quot; title=&quot;&quot; width=&quot;&quot; height=&quot;&quot; border=&quot;&quot;&gt;</code>
+                </p>
+                <blockquote>
+                    <ul class="gap">
+                        <li>src 图片路径 必须属性</li>
+                        <li>alt 文本 替换不能显示的文本为文字</li>
+                        <li>title 文本 提示文本，鼠标放在图像上，显示的文字</li>
+                        <li>width 像素 设置图像宽度</li>
+                        <li>height 像素 设置图像高度</li>
+                        <li>border 像素 设置图像边框粗细</li>
+                    </ul>
+                </blockquote>
+            </blockquote>
+            <h3 id="3">三、链接标签</h3>
+            <blockquote>
+                <p class="gap">1.<code>&lt;a herf =&quot;A&quot;&gt;</code>xxxx<code>&lt;/a&gt;</code>
+                    则点击xxxx跳转至A（内部html文件跳转），
+                    2.如A等于外部网址则为外部链接
+                    如写target=&quot;_blank&quot;于&quot;A&quot;后面则表示新开一个网页跳转
+                    3.<code>&lt;a herf =&quot;#&quot;&gt;</code>xxxx<code>&lt;/a&gt;</code> 跳转空页面
+                    4.<code>&lt;a herf =&quot;&quot;&gt;</code>下载文件<code>&lt;/a&gt;</code> 其中地址的链接为exe或zip等压缩包形式
+                    5.<code>&lt;a herf=&quot;网址&quot;&gt;``&lt;img src=&quot;图片链接&quot;/&gt;``&lt;/a&gt;</code>图片跳转网址
+                </p>
+            </blockquote>
+            <h3 id="4">四、锚点链接</h3>
+            <blockquote>
+                <p>锚点链接 点完快速跳转到页面中某一位置</p>
+                <ul class="gap">
+                    <li>在链接文本的herf属性中，设置属性值为<code>#名字</code>的形式<code>eg:&lt;a herf=&quot;#名字&quot;&gt;</code>xxx<code>&lt;/a&gt;</code>
+                    </li>
+                    <li>找到目标标签位置标签，里面添加一个id属性=刚刚的名字，如：<code>&lt;h3 id=&quot;two&quot;&gt;</code>xxx介绍<code>&lt;/h3&gt;</code>
+                    </li>
+                </ul>
+            </blockquote>
+            <h3 id="5">五、注释标签</h3>
+            <blockquote>
+                <p class="gap">注释标签<code>&lt;!-- xxx --&gt;</code>打出ctrl+/可取消(或怎加)注释标签
+                    （特殊字符见Q）</p>
+            </blockquote>
+            <h3 id="6">六、表格的基本语法</h3>
+            <pre><code>&lt;table&gt;(table是用来定义表格的标签)
+&lt;tr&gt;（tr定义行，嵌套于table中）
+&lt;td&gt;单元格中文字`&lt;/td&gt;`（td定义单元格，必须嵌套于tr中）
+ ...
+&lt;/tr&gt;
+    ...
+&lt;/table&gt;   
+</code></pre>
+            <blockquote>
+                <p><code>&lt;th&gt;</code>代表表头单元格，写出来文本会居中并加粗（表格属性名见Q，这些写到标签table里面去）
+                    <code>&lt;thead&gt;</code>表示表格的头部区域
+                    <code>&lt;tbody&gt;</code>表示表格的主题区域
+                </p>
+            </blockquote>
+
+            <blockquote>
+                <p>合并单元格
+                    跨行合并单元格：rowspan=&quot;合并单元格的个数“
+                    跨列合并单元格：colspan=&quot;合并单元格的个数&quot;</p>
+                <p class="gap">目标单元格
+                    跨行：最上侧为目标单元格
+                    跨列：最左侧为目标单元格 写在td中
+                    合并完删除多余单元格</p>
+            </blockquote>
+            <h3 id="7">七、无序列表</h3>
+            <blockquote>
+                <p><code>&lt;ul&gt;</code>表示无序列表，一般以项目符号呈现列表项，而列表项用<code>&lt;li&gt;</code>标签定义
+                    基本语法 :</p>
+                <blockquote>
+                    <p><code>&lt;ul&gt;</code>
+                        <code>&lt;li&gt;</code>列表项1<code>&lt;/li&gt;</code>
+                        <code>&lt;li&gt;</code>列表项2<code>&lt;/li&gt;</code>
+                        <code>&lt;li&gt;</code>列表项3<code>&lt;/li&gt;</code>
+                        ......
+                        <code>&lt;/ul&gt;</code>
+                    </p>
+                </blockquote>
+                <ul class="gap">
+                    <li>
+                        <p>ul标签中只能放li标签</p>
+                    </li>
+                    <li>
+                        <p>li中可以放任何元素</p>
+                    </li>
+                </ul>
+            </blockquote>
+            <h3 id="8">八、有序列表</h3>
+            <blockquote>
+                <p><code>&lt;ol&gt;</code>表示无序列表，一般以项目符号呈现数字，而列表项用<code>&lt;li&gt;</code>标签定义
+                    基本语法</p>
+                <blockquote>
+                    <p class="gap"><code>&lt;ol&gt;</code>
+                        <code>&lt;li&gt;</code>列表项1&lt;/li&gt;
+                        <code>&lt;li&gt;</code>列表项2<code>&lt;/li&gt;</code>
+                        <code>&lt;li&gt;</code>列表项3<code>&lt;/li&gt;</code>
+                        ......
+                        <code>&lt;/ul&gt;</code>
+                        life-style：none 可去除小圆点
+                    </p>
+                </blockquote>
+            </blockquote>
+            <h3 id="9">九、自定义列表</h3>
+            <blockquote>
+                <p>定义列表的列表项前没有任何项目符号，用于定义描述列表，与<code>&lt;dt&gt;</code>（定义项目/名字）和<code>&lt;dd&gt;</code>（描述每一个项目/名字）一起使用
+                    基本语法</p>
+                <blockquote>
+                    <p><code>&lt;dl&gt;</code>
+                        <code>&lt;dt&gt;</code>名词1<code>&lt;/dt&gt;</code>
+                        <code>&lt;dd&gt;</code>名词2解释1<code>&lt;/dd&gt;</code>
+                        <code>&lt;dd&gt;</code>名词3解释2<code>&lt;/dd&gt;</code>
+                        <code>&lt;/dl&gt;</code>
+                    </p>
+                </blockquote>
+                <p class="gap">注：<code>&lt;dl&gt;``&lt;/dl&gt;</code>只能包含<code>&lt;dt&gt;</code>和<code>&lt;dd&gt;</code>
+                    <code>&lt;dt&gt;&lt;dd&gt;</code>无个数限制，经常是一个<code>&lt;dt&gt;</code>对应多个<code>&lt;dd&gt;</code>
+                </p>
+            </blockquote>
+            <h3 id="10">十、表单</h3>
+            <h4>1.表单域</h4>
+            <blockquote>
+                <p>表单由 表单域 表单控件 提示信息组成
+                    <code>&lt;form&gt;</code>定义表单域，收集用户信息并传递给服务器
+                    格式：<code>&lt;form action=&quot;url地址&quot; method=&quot;提交方式&quot; name=”表单域名称“&gt;</code>
+                </p>
+            </blockquote>
+            <table>
+                <thead>
+                    <tr>
+                        <th>属性</th>
+                        <th>属性值</th>
+                        <th>作用</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>action</td>
+                        <td>url地址</td>
+                        <td>指定地址</td>
+                    </tr>
+                    <tr>
+                        <td>method</td>
+                        <td>get/post</td>
+                        <td>提交方式设置</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>名称</td>
+                        <td>指定名称区分不同表单域</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>2.input表单元素</h4>
+            <blockquote>
+                <p><code>&lt;input</code>表单元素
+                    格式:<code>&lt;input type=&quot;属性值&quot;/&gt;</code>
+                    type用于设置不同属性值以指定不同控件类型
+                    （可取值见Q）
+                    除type属性外，<code>&lt;input&gt;</code>标签还有其他属性，常用属性如下</p>
+            </blockquote>
+            <table>
+                <thead>
+                    <tr>
+                        <th>属性</th>
+                        <th>属性值</th>
+                        <th>描述</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>name</td>
+                        <td>自定义</td>
+                        <td>定义input元素名称</td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>自定义</td>
+                        <td>规定input元素的值</td>
+                    </tr>
+                    <tr>
+                        <td>checked</td>
+                        <td>checked</td>
+                        <td>规定input首次加载时应当被选中</td>
+                    </tr>
+                    <tr>
+                        <td>maxiength</td>
+                        <td>正整数</td>
+                        <td>规定输入字段中字符的最大长度</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>3.label标签</h4>
+            <blockquote>
+                <p><code>&lt;label&gt;</code>标签绑定一个表签文本，浏览器会自动将焦点（光标）转到或者选择相应的表单元素，用来增加用户体验</p>
+                <blockquote>
+                    <p>eg:<code>&lt;lable for=&quot;sex&quot;&gt;</code>男<code>&lt;/label&gt;</code>
+                        <code>&lt;input type=&quot;radio&quot; name=&quot;sex id=&quot;sex&quot;/&gt;</code>
+                    </p>
+                </blockquote>
+            </blockquote>
+            <h4>4.select 下拉表单标签</h4>
+            <blockquote>
+                <pre><code>&lt;select&gt;
+ &lt;option&gt;选项1&lt;/option&gt;
+ &lt;option&gt;选项2&lt;/option&gt;
+ &lt;option&gt;选项3&lt;/option&gt;
+  ......
+&lt;/select&gt;
+</code></pre>
+                <blockquote></blockquote>
+                <ul>
+                    <li>在option中写入selected=&quot;selected&quot;时当前项即为默认选中项</li>
+                </ul>
+            </blockquote>
+            <h4>textarea表单元素</h4>
+            <blockquote>
+                <p>在用户输入内容较多的情况下就不能使用文本框表单，此时我们可以使用<code>&lt;textarea&gt;</code>标签
+                    格式：</p>
+                <blockquote>
+                    <p><code>&lt;textarea row=&quot;3&quot; cols=&quot;20&quot;&gt;</code>(rows=显示行数 cols=每行字符数)
+                        文本内容
+                        <code>&lt;/textarea&gt;</code>
+                    </p>
+                </blockquote>
+            </blockquote>
+
+        </div>
+        <!-- 笔记结束 -->
+    </div>
+    <!-- 尾部开始 -->
+    <div class="footer">
+        <div class="designed">
+            <h2>DESIGNED BY LOCK-LIN</h2>
+        </div>
+        <div class="connection">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 尾部结束 -->
+</body>
+
+</html>
